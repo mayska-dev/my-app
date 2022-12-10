@@ -1,0 +1,15 @@
+<div *ngIf="homeopathy" class="card">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/share/img/homeopathy/{{homeopathy.picture}}.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ homeopathy.name}}</h5>
+        <p class="card-text">{{ homeopathy.description}}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <a href="/play-sound" class="btn btn-warning">Faire le soin</a>
+      </div>
+    </div>
+  </div>
+</div>
