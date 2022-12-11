@@ -1,0 +1,37 @@
+<div *ngIf="stone" class="card">  
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="/assets/share/img/stone/{{stone.picture}}.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ stone.name}}</h5>
+          <p class="card-text">{{ stone.description}}</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a href="/play-sound" class="btn btn-danger">Recharger ma pierre</a>
+        </div>
+      </div>
+    </div>
+</div>
+<br/>
+<h2 class="text-center">Transmuter une pierre</h2>
+<div class="row">
+    <div *ngFor="let stone of stoneList" class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/assets/share/img/stone/{{stone.picture}}.png" class="img-fluid rounded-start"
+                    alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{stone.name}}</h5>
+                    <p class="card-text">{{stone.description | slice:1:100}}...</p>
+                    <a href="/stone/{{stone.id}}" class="btn btn-primary">Détail</a>
+                    <a href="play-sound" class="btn btn-warning">Transmuter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

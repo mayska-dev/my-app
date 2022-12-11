@@ -1,17 +1,18 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of, retry, tap, throwError } from 'rxjs';
-import { Homeopathie } from './homeopathy.module';
+import { Homeopathy } from './homeopathy';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class ServiceService {
+export class HomeopathyService {
 
   constructor(private http: HttpClient) { }
 
-  getHomeopaties(): Observable<Homeopathie[]> {
-    return this.http.get<Homeopathie[]>('api/homeopaties').pipe(
+  getHomeopaties(): Observable<Homeopathy[]> {
+    return this.http.get<Homeopathy[]>('api/homeopaties').pipe(
       tap((homeopathieList => console.table(homeopathieList))),
       catchError((error: HttpErrorResponse) => {
         console.error(error);
@@ -20,8 +21,8 @@ export class ServiceService {
     );
   }
 
-  getHomeopatie(id: number | null): Observable<Homeopathie | undefined> {
-    return this.http.get<Homeopathie>(`api/homeopaties/${id}`).pipe(
+  getHomeopatie(id: number | null): Observable<Homeopathy | undefined> {
+    return this.http.get<Homeopathy>(`api/homeopaties/${id}`).pipe(
       tap((homeopathie => console.log(homeopathie))),
       catchError((error: HttpErrorResponse) => {
         console.error(error);

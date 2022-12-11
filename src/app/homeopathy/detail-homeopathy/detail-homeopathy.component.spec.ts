@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
-import { ServiceService } from '../service.service';
+import { HomeopathyService } from '../homeopathy.service';
 
 import { DetailHomeopathyComponent } from './detail-homeopathy.component';
 
@@ -12,7 +12,7 @@ describe('DetailHomeopathieComponent', () => {
     await TestBed.configureTestingModule({
       providers: [
         ActivatedRoute,
-        ServiceService
+        HomeopathyService
       ],
       declarations: [DetailHomeopathyComponent]
     })

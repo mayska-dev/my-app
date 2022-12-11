@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeopathyModule } from '../homeopathy.module';
-import { ServiceService } from '../service.service';
+import { HomeopathyService } from '../homeopathy.service';
 
 import { ListHomeopathyComponent as ListHomeopathyComponent } from './list-homeopathy.component';
 
@@ -13,7 +13,7 @@ describe('ListHomeopathieComponent', () => {
     await TestBed.configureTestingModule({
       providers: [
         HttpClient,
-        ServiceService
+        HomeopathyService
       ],
       declarations: [ListHomeopathyComponent],
     })

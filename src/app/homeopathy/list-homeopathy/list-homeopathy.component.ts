@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Homeopathie } from '../homeopathy.module';
-import { ServiceService } from '../service.service';
+import { AnalyseService } from 'src/app/analyse/analyse.service';
+import { Homeopathy } from '../homeopathy';
+import { HomeopathyService } from '../homeopathy.service';
 
 @Component({
   selector: 'app-homeopathylist',
@@ -8,13 +9,18 @@ import { ServiceService } from '../service.service';
 })
 export class ListHomeopathyComponent implements OnInit {
 
-  homeopatyList: Homeopathie[] = [];
+  homeopatyList: Homeopathy[] = [];
 
-  constructor(private service: ServiceService) { }
+  constructor(
+    private homeopathyService: HomeopathyService
+  ) { }
 
   ngOnInit() {
-    this.service.getHomeopaties()
+    this.homeopathyService.getHomeopaties()
       .subscribe(homeopatyList => this.homeopatyList = homeopatyList);
+    
+
+
   }
 
 

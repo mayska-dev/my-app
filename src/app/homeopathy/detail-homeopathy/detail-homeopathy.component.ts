@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Homeopathie } from '../homeopathy.module';
-import { ServiceService } from '../service.service';
+import { Analyse } from 'src/app/analyse/analyse';
+import { AnalyseService } from 'src/app/analyse/analyse.service';
+import { Homeopathy } from '../homeopathy';
+import { HomeopathyService } from '../homeopathy.service';
 
 @Component({
   selector: 'app-detail-homeopathy',
@@ -9,20 +11,19 @@ import { ServiceService } from '../service.service';
 })
 export class DetailHomeopathyComponent implements OnInit {
 
-  homeopathy: Homeopathie | undefined
+  homeopathy: Homeopathy | undefined
 
   constructor(
     private route: ActivatedRoute,
-    private service: ServiceService
+    private service: HomeopathyService
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     const id: string | null = this.route.snapshot.paramMap.get('id')
     if (id) {
       this.service.getHomeopatie(+id)
         .subscribe(homeopathy => this.homeopathy = homeopathy)
     }
-
   }
 
 }
