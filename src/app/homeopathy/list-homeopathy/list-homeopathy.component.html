@@ -1,37 +1,38 @@
-<div class="card mb-3" style="max-width: 100%;">
-    <div class="row g-0">
-        <div class="col-md-3">
-            <img src="/assets/share/img/homeopathy/laboratory-tests.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title">Votre analyse</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <a href="/analyses" class="btn btn-primary">Faire mon analyse</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<br />
-
-<h2 class="h2">Liste des plantes disponible</h2>
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Votre analyse</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="/assets/share/img/homeopathy/laboratory-tests.png" alt="Photo of a Shiba Inu" class="img-analyse">
+    <mat-card-content>
+        <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a href="/analyses" mat-button>Analyser</a>
+    </mat-card-actions>
+</mat-card>
+<h2 class="h2">Liste des plantes disponibles</h2>
+<hr/>
 <div class="row">
-    <div *ngFor="let homeopathy of homeopatyList" class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="/assets/share/img/homeopathy/{{homeopathy.picture}}.png" class="img-fluid rounded-start"
-                    alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">{{homeopathy.name}}</h5>
-                    <p class="card-text">{{homeopathy.description | slice:1:100}}...</p>
-                    <a href="/homeopathy/{{homeopathy.id}}" class="btn btn-primary">Détail</a>
-                </div>
-            </div>
-        </div>
+    <div class="col-6" *ngFor="let homeopathy of homeopatyList">
+        <mat-card class="list-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{homeopathy.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="/assets/share/img/homeopathy/{{homeopathy.picture}}.png" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                    {{homeopathy.description | slice:1:200}}...
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a href="/homeopathy/{{homeopathy.id}}" mat-button>Détail</a>
+            </mat-card-actions>
+        </mat-card>
     </div>
 </div>

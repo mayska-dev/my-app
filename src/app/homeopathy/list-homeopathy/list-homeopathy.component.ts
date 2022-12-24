@@ -5,7 +5,8 @@ import { HomeopathyService } from '../homeopathy.service';
 
 @Component({
   selector: 'app-homeopathylist',
-  templateUrl: './list-homeopathy.component.html'
+  templateUrl: './list-homeopathy.component.html',
+  styleUrls: ['./list-homeopathy.component.css']
 })
 export class ListHomeopathyComponent implements OnInit {
 

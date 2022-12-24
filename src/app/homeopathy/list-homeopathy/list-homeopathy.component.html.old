@@ -1,0 +1,37 @@
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+        <div class="col-md-3">
+            <img src="/assets/share/img/homeopathy/laboratory-tests.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">Votre analyse</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="/analyses" class="btn btn-primary">Faire mon analyse</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<h2 class="h2">Liste des plantes disponible</h2>
+<div class="row">
+    <div *ngFor="let homeopathy of homeopatyList" class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/assets/share/img/homeopathy/{{homeopathy.picture}}.png" class="img-fluid rounded-start"
+                    alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{homeopathy.name}}</h5>
+                    <p class="card-text">{{homeopathy.description | slice:1:100}}...</p>
+                    <a href="/homeopathy/{{homeopathy.id}}" class="btn btn-primary">Détail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
