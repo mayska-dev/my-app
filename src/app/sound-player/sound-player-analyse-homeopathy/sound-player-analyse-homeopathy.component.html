@@ -1,0 +1,9 @@
+<div *ngIf="progress<100">
+    <h1>Analyse en cours</h1>
+    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+</div>
+
+<div *ngIf="progress==100">
+    <h1>Fin analyse</h1>
+    <p>Il vous faut pour ....</p>
+</div>
