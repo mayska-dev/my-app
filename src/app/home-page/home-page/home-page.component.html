@@ -1,84 +1,38 @@
-<div class="card">
-    <div class="row g-0">
-        <div class="col-md-2">
-            <img src="/assets/share/img/home/homeopathy.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-6">
-            <div class="card-body">
-                <h5 class="card-title">Homeopathies</h5>
-                <p class="card-text">Nulla at tortor ut quam efficitur egestas. Cras auctor, enim eu congue efficitur,
-                    enim diam volutpat neque, sed elementum augue nisl eu nisi...</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Informations
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Information</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quia ex, fuga consectetur
-                                atque quasi vero, ipsa eveniet harum animi excepturi assumenda autem architecto
-                                repellat. Veritatis sint facilis nesciunt voluptatum.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="/homeopathies" class="btn btn-success">Voir la liste</a>
-                <a href="/analyses" class="btn btn-warning">Faire mon analyse</a>
-            </div>
-        </div>
-    </div>
-</div>
-<br />
-<div class="card">
-    <div class="row g-0">
-        <div class="col-md-2">
-            <img src="/assets/share/img/home/stone.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-6">
-            <div class="card-body">
-                <h5 class="card-title">Pierres</h5>
-                <p class="card-text">Nunc nec nibh nunc. Mauris malesuada nisi mi. Aenean vitae aliquam augue, eu
-                    scelerisque dolor. Sed neque magna, mollis vel purus ac, egestas sagittis justo...</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Informations
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Information</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quia ex, fuga consectetur
-                                atque quasi vero, ipsa eveniet harum animi excepturi assumenda autem architecto
-                                repellat. Veritatis sint facilis nesciunt voluptatum.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="/stones" class="btn btn-success">Voir la liste</a>
-            </div>
-        </div>
-    </div>
-</div>
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Homeopathies</mat-card-title>
+        <mat-card-subtitle>voir la liste</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-lg-image src="/assets/share/img/home/homeopathy.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>
+            Nulla at tortor ut quam efficitur egestas. Cras auctor, enim eu congue efficitur,
+            enim diam volutpat neque, sed elementum augue nisl eu nisi,
+            Nulla at tortor ut quam efficitur egestas. Cras auctor, enim eu congue efficitur,
+            enim diam volutpat neque, sed elementum augue nisl eu nisi...
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a href="/homeopathies" mat-button>Voir</a>
+        <a href="/analyses" mat-button>Faire mon analyse</a>
+    </mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Pierres</mat-card-title>
+        <mat-card-subtitle>voir la liste</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-lg-image src="/assets/share/img/home/stone.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>
+            Nunc nec nibh nunc. Mauris malesuada nisi mi. Aenean vitae aliquam augue, eu
+                    scelerisque dolor. Sed neque magna, mollis vel purus ac, egestas sagittis justo...
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a href="/stones" mat-button>Voir</a>
+    </mat-card-actions>
+</mat-card>

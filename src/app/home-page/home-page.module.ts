@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule, Routes } from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {LayoutModule} from '@angular/cdk/layout';
+
 
 const homePage: Routes = [
   { path: '', component: HomePageComponent }
@@ -13,7 +18,11 @@ const homePage: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(homePage)
+    RouterModule.forChild(homePage),
+    MatCardModule,
+    MatButtonModule,
+    MatGridListModule,
+    LayoutModule
   ]
 })
 export class HomePageModule { }

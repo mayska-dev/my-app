@@ -12,6 +12,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { PageerrorModule } from './page-error/page-error.module';
 import { SoundPlayerModule } from './sound-player/sound-player.module';
 import { StoneModule } from './stone/stone.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { StoneModule } from './stone/stone.module';
     HomePageModule,
     HomeopathyModule,
     PageerrorModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
