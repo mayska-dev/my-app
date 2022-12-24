@@ -1,0 +1,38 @@
+
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+        <div class="col-md-3">
+            <img src="/assets/share/img/homeopathy/laboratory-tests.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">Votre analyse</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="/play-sound" class="btn btn-warning">Analyser</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<h2 class="text-center">Les principaux organes du corps humain</h2>
+<p>Vous pouvez lancer une analyse spécifique dans liste ci-dessous.</p>
+<br/>
+<div class="row">
+    <div *ngFor="let analyse of analyseList" class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/assets/share/img/analyse/{{analyse.picture}}.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{analyse.name}}</h5>
+                    <p class="card-text">{{analyse.description | slice:1:100}}...</p>
+                    <a href="analyse/{{analyse.id}}" class="btn btn-primary">Détail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

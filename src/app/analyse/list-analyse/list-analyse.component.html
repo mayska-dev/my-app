@@ -1,37 +1,38 @@
-<div class="card mb-3" style="max-width: 100%;">
-    <div class="row g-0">
-        <div class="col-md-3">
-            <img src="/assets/share/img/homeopathy/laboratory-tests.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title">Votre analyse</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <a href="/play-sound" class="btn btn-warning">Analyser</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<br />
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Votre analyse</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="/assets/share/img/homeopathy/laboratory-tests.png" alt="Photo of a Shiba Inu" class="img-analyse">
+    <mat-card-content>
+        <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a href="/play-sound" mat-button>Analyser</a>
+    </mat-card-actions>
+</mat-card>
 <h2 class="text-center">Les principaux organes du corps humain</h2>
 <p>Vous pouvez lancer une analyse spécifique dans liste ci-dessous.</p>
-<br/>
 <div class="row">
-    <div *ngFor="let analyse of analyseList" class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="/assets/share/img/analyse/{{analyse.picture}}.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">{{analyse.name}}</h5>
-                    <p class="card-text">{{analyse.description | slice:1:100}}...</p>
-                    <a href="analyse/{{analyse.id}}" class="btn btn-primary">Détail</a>
-                </div>
-            </div>
-        </div>
+    <div class="col-6" *ngFor="let analyse of analyseList">
+        <mat-card class="list-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{analyse.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="/assets/share/img/analyse/{{analyse.picture}}.png" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                    {{analyse.description | slice:1:100}}...
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a href="analyse/{{analyse.id}}" mat-button>Détail</a>
+            </mat-card-actions>
+        </mat-card>
     </div>
 </div>
